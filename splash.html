@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeatBot Rescue</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="splash-body">
+
+  <div class="splash-container">
+    <video id="logoVideo" class="logo-video" autoplay muted playsinline loop>
+      <source src="assests/videos/Beatbot Logo.mp4" type="video/mp4">
+    </video>
+
+    <button class="splash-enter-btn" onclick="goToLogin()">LET"S GO!!!</button>
+  </div>
+
+  <script>
+    function goToLogin() {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

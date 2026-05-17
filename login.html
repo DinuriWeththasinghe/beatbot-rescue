@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BeatBot Rescue - Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="login-page-wrapper">
+  <div class="login-container">
+
+    <h1 class="login-title">BeatBot Rescue</h1>
+    <p class="login-subtitle">Login to start rescuing robots</p>
+
+    <input type="text" placeholder="Enter Username" id="username">
+    <input type="password" placeholder="Enter Password">
+
+    <button class="game-style-btn" onclick="saveUsernameAndLogin()">Login</button>
+
+    <div id="savedGameOptions" style="display: none; margin-top: 20px;">
+      <p class="saved-text">Saved game found</p>
+      <div class="saved-btn-row">
+        <button class="game-style-btn small-btn" onclick="continueSavedGame()">Continue Game</button>
+        <button class="game-style-btn small-btn" onclick="startFreshGameFromLogin()">Start New Game</button>
+      </div>
+    </div>
+
+    <br>
+
+    <a class="leaderboard-link" href="leaderboard.html">View Leaderboard</a>
+
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/12.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

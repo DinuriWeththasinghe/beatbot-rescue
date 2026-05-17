@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BeatBot Rescue - Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="game-page-wrapper">
+
+  <div class="game-container modern-game-container">
+
+    <div class="top-bar modern-top-bar">
+      <h1 class="game-page-title">BeatBot Rescue</h1>
+
+      <div class="game-stats modern-game-stats">
+        <div class="stat-pill">Player: <span id="playerName">Guest</span></div>
+        <div class="stat-pill">Level: <span id="level">1</span></div>
+        <div class="stat-pill">Score: <span id="score">0</span></div>
+        <div class="stat-pill timer-pill">Time: <span id="timer">30</span>s</div>
+      </div>
+    </div>
+
+    <div class="main-game-panel modern-main-game-panel">
+
+      <div class="robot-panel modern-card">
+        <h2 class="panel-title">Robot Status</h2>
+        <div class="robot-icon modern-robot-icon">🤖</div>
+
+        <div class="robot-info-list">
+          <p><strong>Robot ID:</strong> <span id="robotId">BBR-01</span></p>
+          <p><strong>Status:</strong> <span id="robotStatus">Waiting for rescue</span></p>
+          <p><strong>Category:</strong> <span id="questionCategory">General</span></p>
+          <p><strong>Difficulty:</strong> <span id="questionDifficulty">Easy</span></p>
+        </div>
+
+        <div class="robot-core-section">
+          <p class="core-label">Core Stability</p>
+          <div class="core-bar">
+            <div class="core-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-panel modern-card">
+        <h2 class="panel-title">Level Challenge</h2>
+
+        <div class="question-box">
+          <p id="questionText">Question will appear here.</p>
+        </div>
+
+        <div class="answer-grid" id="answerGrid"></div>
+
+        <p id="messageBox"></p>
+
+        <div class="game-buttons modern-game-buttons">
+          <button class="game-style-btn small-btn" onclick="pauseGame()">Pause</button>
+          <button class="game-style-btn small-btn" onclick="startNewGame()">Restart</button>
+          <button class="game-style-btn small-btn" onclick="submitAnswer()">Submit Answer</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/12.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/12.10.0/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
